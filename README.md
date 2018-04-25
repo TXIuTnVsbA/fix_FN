@@ -1,5 +1,5 @@
 # fix_FN
-Hackintosh    ssdt_hotpatch
+Hackintosh     ssdt_hotpatch
 
 说明：
 
@@ -9,11 +9,11 @@ Hackintosh    ssdt_hotpatch
     
     编辑config.plist的ACPI页的DSDT patches使得原函数失效，同页添加SortedOrder选项SSDT-FN.aml使得hotpatch生效
 
-config.plist
+  config.plist
 
-    find:5F513630 00
+      find:5F513630 00
     
-    replace:58513630 00
+      replace:58513630 00
     
     
 原理：
