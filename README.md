@@ -11,9 +11,9 @@ Hackintosh     ssdt_hotpatch
 		
 		config.plist
 
-				find:5F513630 00
+        find:5F513630 00
     
-				replace:58513630 00
+        replace:58513630 00
 				
 原理：
 
@@ -22,8 +22,13 @@ Hackintosh     ssdt_hotpatch
     dsdt patches是用iasl加l参数编译原dsdt.dsl然后从dsdt.lst查找到的
 		
     也可以用如下命令
-		
-    		echo "_Q60" | xxd
-				
-    		echo "XQ60" | xxd
     
+        echo "_Q60" | xxd
+        
+        echo "XQ60" | xxd
+    
+    
+        
+        
+        
+        
