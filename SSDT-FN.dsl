@@ -26,15 +26,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "fn", 0x00000000)
 
     Scope (\_SB.PCI0.LPCB.EC0)
     {
-        Method (_Q60, 0, NotSerialized)  // _Qxx: EC Query
+        Method (_Q60, 0, NotSerialized)  // _Qxx: EC Query Fn某按键
         {
-            If (LEqual (CBSC, 0x04))
+            If (LEqual (CBSC, 0x04)) //如果是Fn+F4的话
             {
-                Notify (RMKB, 0x114F)
+                Notify (RMKB, 0x114F) 
                 Notify (RMKB, 0x124F)
             }
 
-            If (LEqual (CBSC, 0x05))
+            If (LEqual (CBSC, 0x05))//如果是Fn+F5的话
             {
                 Notify (RMKB, 0x114D)
                 Notify (RMKB, 0x124D)
@@ -42,7 +42,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "fn", 0x00000000)
         }
     }
 
-    Device (RMKB)
+    Device (RMKB) //配合ACPIKeyboard.kext的一个我也不知道叫什么
     {
         Name (_HID, "RMKB0000")  // _HID: Hardware ID
     }
