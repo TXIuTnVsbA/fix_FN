@@ -23,7 +23,7 @@ Hackintosh     ssdt_hotpatch
 		
     也可以用如下命令
 		
-    echo "_Q60" | xxd
-		
-    echo "XQ60" | xxd
+    		echo "_Q60" | xxd
+				
+    		echo "XQ60" | xxd
     
